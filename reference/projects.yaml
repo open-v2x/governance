@@ -3,7 +3,7 @@ centerview:
     name: Weiwei Mo
     github: moweiwei
     email: moweiwei6@gmail.com
-  service: V2X Edge Portal
+  service: V2X Central Portal
   mission: >
     To implement v2x central side portal - web console.
   url: https://github.com/open-v2x/centerview

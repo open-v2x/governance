@@ -40,7 +40,7 @@ As discussed above, communication is incredibly important. As a team, you want t
 
 ## Meetings
 
-Attend the Technical Steering Committee meetings (assuming your timezone allows). The TSC has meetings every Thursday; check Eavesdrop. To hold the meeting we must meet quorum, so it's important that you attend as many as possible. If you have topics that should be discussed at the meeting, they should be sent to the chair or vice-chair to be included in the agenda. The agenda should also be publicized to online-document platform to encourage community involvement.
+Attend the Technical Steering Committee meetings (assuming your timezone allows). **The TSC has meetings every Thursday**; check Eavesdrop. To hold the meeting we must meet quorum, so it's important that you attend as many as possible. If you have topics that should be discussed at the meeting, they should be sent to the chair or vice-chair to be included in the agenda. The agenda should also be publicized to online-document platform to encourage community involvement.
 
 ## Governance Core Duties
 
