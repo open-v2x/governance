@@ -22,8 +22,8 @@
   - Prepare release tracker eventpad (During PTG), Example:
   - Update the eventpad link in the wiki
 - Check on the active goals and, if there is no active goal, then ensure that 2 TSC members are signed up to manage the goal selection process.
-- Ensure PTI and testing runtime update is done.
+- Ensure PTI(Project Testing Interface) and testing runtime update is done.
 - After milestone-1, ensure the next release naming is started.
-- During R-9 week, check "PTL and TSC elections".
+- Check "PTL and TSC elections".
   - Ensure PTL and TSC election schedule is prepared as per schedule mentioned in [projects.yaml](projects.yaml) & [members.yaml](members.yaml)
   - Encourage the TSC members that are not standing for [re]election to help as the election officials.
