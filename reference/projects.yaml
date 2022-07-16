@@ -1,0 +1,100 @@
+centerview:
+  ptl:
+    name: Weiwei Mo
+    github: moweiwei
+    email: moweiwei6@gmail.com
+  service: V2X Edge Portal
+  mission: >
+    To implement v2x central side portal - web console.
+  url: https://github.com/open-v2x/centerview
+  deliverables:
+    centerview:
+      repos:
+        - open-v2x/centerview
+    # centerview-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/centerview-specs
+cerebrum:
+  ptl:
+    name: Wu Wenxiang
+    github: wu-wenxiang
+    email: wu-wenxiang@outlook.com
+  service: V2X Data Processing service
+  mission: >
+    To implement services and libraries for V2X data processing.
+  url: https://github.com/open-v2x/cerebrum
+  deliverables:
+    cerebrum:
+      repos:
+        - open-v2x/cerebrum
+    # cinder-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/cerebrum-specs
+docs:
+  ptl:
+    name: Tianyu Gao
+    github: FrankGTY
+    email: frankccgty@gmail.com
+  service: V2X Documentations
+  mission: >
+    OpenV2X documentations
+  url: https://github.com/open-v2x/docs
+  deliverables:
+    docs:
+      repos:
+        - open-v2x/docs
+dandelion:
+  ptl:
+    name: Boxiang Zhu
+    github: zhubx007
+    email: bxzhu_5355@163.com
+  service: V2X Device Management service
+  mission: >
+    To implement services and libraries to provide on-demand, self-service
+    access to V2X Device resources. Managing V2X roadside devices wherever
+    the wind goes.
+  url: https://github.com/open-v2x/dandelion
+  deliverables:
+    dandelion:
+      repos:
+        - open-v2x/dandelion
+    # dandelion-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/dandelion-specs
+edgeview:
+  ptl:
+    name: Youmin Li
+    github: AriaAto
+    email: 306917629@qq.com
+  service: V2X Edge Portal
+  mission: >
+    To implement v2x edge side portal - web console.
+  url: https://github.com/open-v2x/edgeview
+  deliverables:
+    edgeview:
+      repos:
+        - open-v2x/edgeview
+    # edgeview-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/edgeview-specs
+roadmocker:
+  ptl:
+    name: Youmin Li
+    github: AriaAto
+    email: 306917629@qq.com
+  service: V2X RSE(Road Side Equipment) Simulator
+  mission: >
+    To implement v2x edge side portal - web console.
+  url: https://github.com/open-v2x/roadmocker
+  deliverables:
+    roadmocker:
+      repos:
+        - open-v2x/roadmocker
+    # roadmocker-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/roadmocker-specs
