@@ -48,4 +48,4 @@ Book time on your calendar for reviewing open patches in the TSC Repos. As a TSC
 
 ## TSC Interactions with Other Governing Bodies
 
-Its encouraged that you attend Board of Directors meetings wherever possible. There are a variety of topics that often come up that the TSC should be weighing in on. Sometimes there are face to face meetings as well where your attendance is encouraged.
+It's encouraged that you attend Board of Directors meetings wherever possible. There are a variety of topics that often come up that the TSC should be weighing in on. Sometimes there are face to face meetings as well where your attendance is encouraged.
