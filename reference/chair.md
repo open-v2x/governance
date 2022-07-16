@@ -19,7 +19,7 @@
 ## Each Cycle
 
 - Manage the initiative tracker
-  - Prepare release tracker eventpad (During PTG), Example:
+  - Prepare release tracker eventpad (During PTG)
   - Update the eventpad link in the wiki
 - Check on the active goals and, if there is no active goal, then ensure that 2 TSC members are signed up to manage the goal selection process.
 - Ensure PTI(Project Testing Interface) and testing runtime update is done.
