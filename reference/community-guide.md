@@ -1,6 +1,6 @@
 # OpenV2X 社区章程
 
-（本文档目前为章程草案，OpenV2X 第一届董事会成立之后，经董事会投票讨论、修改、表决后，在发布正式章程。）
+（本文档目前为章程草案，OpenV2X 第一届董事会成立之后，经董事会投票讨论、修改、表决后，再发布正式章程。）
 
 本文档为 OpenV2X 社区章程和治理框架，描述 OpenV2X 社区协作机制，以便为企业和贡献者加入 OpenV2X 项目提供公平的环境和开放的流程。
 
@@ -25,22 +25,22 @@ OpenV2X 源码将同时托管在 [Gitee](https://gitee.com/open-v2x) 和 [Github
 ### 1.5 项目范围治理
 
 - OpenV2X 项目主要致力于路侧开放基础设施的模块，**车侧的相关能力实现原则上不包含在 OpenV2X 项目范围中**。
-- OpenV2X 项目定位可以随着未来需求变化而演进，相关具备新功能子项目将开放给社区，由开发者自由发起，成为孵化期项目（Incubation Project）。但是从孵化期项目转换为社区正式项目（Official Project），将由[社区技术委员会]()（TSC）投票决定。
+- OpenV2X 项目定位可以随着未来需求变化而演进，相关具备新功能子项目将开放给社区，由开发者自由发起，成为孵化期项目（Incubation Project）。但是从孵化期项目转换为社区正式项目（Official Project），将由[社区技术委员会](https://github.com/open-v2x/governance/blob/master/reference/tsc-guide.md)（TSC）投票决定。
 - OpenV2X 2022年-2023年的项目范围和目标架构
   - 中心侧：
-    - **[统一管理界面 Central Portal](https://github.com/open-v2x/centerview)**: 用于统一整合、管理和呈现所有边缘数据的中心管理平
+    - **[统一管理界面 Central Portal](https://github.com/open-v2x/centerview)**: 用于统一整合、管理和呈现所有边缘数据的中心管理平台
   - 5G MEC 边缘侧：
     - **[边缘管理界面 Edge Portal](https://github.com/open-v2x/edgeview)**：用于单个 5G MEC 机房、覆盖区域性多个路口的二级管理界面
-    - **[边缘设备管理服务 Device Management](https://github.com/open-v2x/dandelion)（dandelion）**：部署都在单个5G MEC机房中，用来路侧设备RSE的信息、状态和配置的服务
+    - **[边缘设备管理服务 Device Management](https://github.com/open-v2x/dandelion)（dandelion）**：部署都在单个 5G MEC 机房中，用来路侧设备 RSE 的信息、状态和配置的服务
     - **[边缘数据流式服务 Data Processing Flow](https://github.com/open-v2x/cerebrum)（cerebrum）**：用来处理路侧信息融合、预警的数据处理模块、包含数据转换(Transsform Driver)、预处理算法（Pre-process Algorithm）、特定领域算法（Specific Algrithm）和后处理算法（Post-process Algorithm）四个插件式算法模块以及相应第三方驱动和算法库。
     - **消息服务 MQ Server**：用来接受和处理 RSE、RSU 等结构化数据，数据遵循“新四跨”协议标准
-    - **TCP 服务 TCP Server（规划中）**：用来接受RSE路侧设备非结构化数据（裸数据，如原始视频流、原始雷达数据流等）的服务
-    - **运维代理 Maintenance Agent（规划中）**: 支持系统监控和运维的服务，用以收集单个5G MEC机房中关键服务的健康状态。
+    - **TCP 服务 TCP Server（规划中）**：用来接受 RSE 路侧设备非结构化数据（裸数据，如原始视频流、原始雷达数据流等）的服务
+    - **运维代理 Maintenance Agent（规划中）**: 支持系统监控和运维的服务，用以收集单个 5G MEC 机房中关键服务的健康状态
     - **车载服务 Car Service(规划中)**：提供给车的按需增值生态服务
   - 模拟器：
-    - **[路侧设备模拟器 Roadside Equipment Simulator](https://github.com/open-v2x/roadmocker)（roadmocker）**： 用来模拟路侧雷达、视频、RSU设备的模拟器，模拟路侧信息的上报、接受、多路模拟数据输入等能力。
+    - **[路侧设备模拟器 Roadside Equipment Simulator](https://github.com/open-v2x/roadmocker)（roadmocker）**： 用来模拟路侧雷达、视频、RSU 设备的模拟器，模拟路侧信息的上报、接受、多路模拟数据输入等能力
 
-  ![](https://raw.githubusercontent.com/open-v2x/docs/14ee93dd2d3ebc8fb282aa13091d50653e3308d5/src/images/v2x-arch-details.svg)
+  ![](https://gitee.com/open-v2x/docs/raw/master/src/images/v2x-arch-details.svg)
 
 - 不包含在 OpenV2X 规划中的能力：
   - 车载操作系统
@@ -108,7 +108,7 @@ OpenV2X 的社区会员由董事会员、高级会员和普通会员组成。
 
 ### 2.5 会员加入流程
 
-1. 填写企业会员入会申请表格，打印并加盖公章。并且准备好公司营业执照扫描件一份
+1. 填写企业会员入会申请表格，打印并加盖公章；并且准备好公司营业执照扫描件一份
 2. 将以上电子材料发送至秘书处邮箱：<openv2x@shanghaiopen.org.cn>
 3. 社区秘书处协助待加入伙伴申请材料的提交和跟踪反馈
 4. 董事会定期对待加入伙伴申请材料进行讨论，并给出审核建议
