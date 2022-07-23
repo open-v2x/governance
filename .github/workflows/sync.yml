@@ -8,5 +8,5 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
         with:
-          source-repo: "git@github.com:open-v2x/governance.git"
+          source-repo: "https://github.com/open-v2x/governance.git"
           destination-repo: "git@gitee.com:open-v2x/governance.git"
