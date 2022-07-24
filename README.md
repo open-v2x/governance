@@ -21,3 +21,7 @@ Directory structure:
 
   Documentation for OpenV2X community-wide goals, organized by release cycle. These pages will be
   updated with project status info over time, and if goals are revised.
+
+## Notice
+
+1. Please run "[`dprint fmt`](https://dprint.dev/)" to format markdown files before creating PR.
