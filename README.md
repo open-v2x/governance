@@ -1,5 +1,7 @@
 # OpenV2X Governance
 
+English | [简体中文](README-zh_CN.md)
+
 The repository contains OpenV2X Technical Steering Committee reference documents and tracks official
 resolutions voted by the committee. It also contains a library for accessing some of the
 machine-readable data in the repository.
