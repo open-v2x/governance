@@ -1,5 +1,7 @@
 # TSC Chair Responsibilities
 
+English | [简体中文](reference/chair-zh_CN.md)
+
 > Note: This document is maintained as a simple text file, outside of the published governance
 > document, because it is meant to be used for shared notes rather than as an official "guide to
 > being TSC chair".
