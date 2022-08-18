@@ -1,5 +1,7 @@
 # Technical Steering Committee Onboarding Guide
 
+English | [简体中文](/reference/tsc-guide-zh_CN.md)
+
 You're either here because you are interested in being on the TSC one day or because you were
 recently elected, either way: Thank You! We appreciate the interest and your desire to volunteer to
 help steer this big wonderful project!
