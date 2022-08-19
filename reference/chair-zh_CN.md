@@ -1,6 +1,6 @@
 # TSC 主席的责任
 
-[English](reference/chair.md) | 简体中文
+[English](/reference/chair.md) | 简体中文
 
 > 注意：本文档作为一个在已发布的治理文档之外的简单的文本文件进行维护， 因为它旨在用于共享注释，而不是作为官方的“如何成为 TSC 主席指南”。
 
