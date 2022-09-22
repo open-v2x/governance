@@ -69,7 +69,18 @@
 - Bug Fix: 缺陷修复，同样可以对比上次发版的提交记录，列出新修复的缺陷问题
 - Known Issue: 指的是未解决问题列表，需要提交 issue 到对应项目下
 
-## 4.2 发布
+## 4.2 tag 命名规则
+
+> 参考 albany-1.0.126
+
+基本包含:
+
+- 发布版本，如: "alabny"
+- API 接口版本: 接口无删减的情况下，数字不变，一般为"1"
+- 功能新增: 同一发布版本有功能新增时数字递增
+- bug 修复数量: 截止版本发布日期当天的 bug 修复数量
+
+## 4.3 发布
 
 到 `open-v2x/docs` 项目下点击 [Releases](https://github.com/open-v2x/docs/releases) 到 release 列表，新建一个
 release
