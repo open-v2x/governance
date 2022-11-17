@@ -105,7 +105,7 @@ hippocampus:
     email: frankccgty@gmail.com
   service: V2X video streaming
   mission: >
-    Connect to camera to present video stream.
+    To implement object detection and multi-object tracking on video stream.
   url: https://github.com/open-v2x/hippocampus
   deliverables:
     hippocampus:
