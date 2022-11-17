@@ -13,7 +13,7 @@
 现有 TSC 成员的第一步是同意由选举官方准备的 patch 以更新 TSC 名册。可以参考<https://github.com/open-v2x/governance/pull/1>
 
 当这个 patch merged 后，委员会成员就确认下来，与此同时我们需要一位主席。如果您有兴趣担任主席，（参考 governance
-[chair.md](chair-zh_CN.mdc)）您需要在 refrence/members.yaml 提交一个 patch 用于修改您的角色：to chair。这些主席提名的 patch
+[chair.md](chair-zh_CN.md)）您需要在 refrence/members.yaml 提交一个 patch 用于修改您的角色：to chair。这些主席提名的 patch
 应该在新成员入座的两周内被选举出。
 
 在主席席位确定后，副主席候选人应该在主席入座的一周内被选举出，候选人需要提交一个 patch 在 reference/members.yaml 增加一位副主席席位。
