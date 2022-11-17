@@ -100,10 +100,10 @@ roadmocker:
     #     - open-v2x/roadmocker-specs
 hippocampus:
   ptl:
-    name: Ruixue Sun
-    github: srx0914
-    email: 18309293258@163.com
-  service: V2X RSE(Road Side Equipment) Simulator
+    name: Tianyu Gao
+    github: FrankGTY
+    email: frankccgty@gmail.com
+  service: V2X video streaming
   mission: >
     Connect to camera to present video stream.
   url: https://github.com/open-v2x/hippocampus
