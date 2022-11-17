@@ -34,9 +34,9 @@ cerebrum:
     #     - open-v2x/cerebrum-specs
 docs:
   ptl:
-    name: Tianyu Gao
-    github: FrankGTY
-    email: frankccgty@gmail.com
+    name: Liangping Chen
+    github: lin-fuyu
+    email: 1572922639@qq.com
   service: V2X Documentations
   mission: >
     OpenV2X documentations
@@ -47,9 +47,9 @@ docs:
         - open-v2x/docs
 dandelion:
   ptl:
-    name: Boxiang Zhu
-    github: zhubx007
-    email: bxzhu_5355@163.com
+    name: Lei Qiao
+    github: qiaolei1
+    email: 1716482243@qq.com
   service: V2X Device Management service
   mission: >
     To implement services and libraries to provide on-demand, self-service
@@ -98,3 +98,37 @@ roadmocker:
     #   release-management: none
     #   repos:
     #     - open-v2x/roadmocker-specs
+hippocampus:
+  ptl:
+    name: Tianyu Gao
+    github: FrankGTY
+    email: frankccgty@gmail.com
+  service: V2X video streaming
+  mission: >
+    To implement object detection and multi-object tracking on video stream.
+  url: https://github.com/open-v2x/hippocampus
+  deliverables:
+    hippocampus:
+      repos:
+        - open-v2x/hippocampus
+    # hippocampus-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/hippocampus-specs
+lidar:
+  ptl:
+    name: Lei Qiao
+    github: qiaolei1
+    email: 1716482243@qq.com
+  service: V2X lidar service
+  mission: >
+    To implement services for V2X lidar.
+  url: https://github.com/open-v2x/lidar
+  deliverables:
+    lidar:
+      repos:
+        - open-v2x/lidar
+    # lidar-specs:
+    #   release-management: none
+    #   repos:
+    #     - open-v2x/lidar-specs
