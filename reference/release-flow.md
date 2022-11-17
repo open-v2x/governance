@@ -23,6 +23,17 @@
 
 ## 2. 提交切换分支变更代码
 
+## 2.1 搭建 CD 基础环境
+
+### 2.1.1 Ubuntu 22.04
+
+1. config ssh
+2. `apt-get install docker.io docker-compose`
+3. copy test.mp4 to `/openv2x/videos/` for rtsp stream simulator
+4. set env in `/etc/environment`, `export OPENV2X_EXTERNAL_IP=...`
+
+## 2.2 提交代码到新分支
+
 拉取各项目新分支代码，修改分支和 tag 名，再提交到新分支上
 
 参考提交:
