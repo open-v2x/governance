@@ -25,17 +25,20 @@
 
 ## 2.1 搭建 CD 基础环境
 
-1. config ssh
+### 2.1.1 通用步骤
+
+1. config sshd
 2. copy test.mp4 to `/openv2x/videos/` for rtsp stream simulator
 3. set env in `/etc/environment`, `export OPENV2X_EXTERNAL_IP=...`
+4. docker pull hippocampus-base & v2x-algo-base for cache
 
-### 2.1.1 Ubuntu 22.04
+### 2.1.2 Ubuntu 22.04
 
 1. `apt-get install docker.io docker-compose`
 
-### 2.1.2 CentOS 7.9 2009
+### 2.1.3 CentOS 7.9 2009
 
-1. upgrade kernel
+1. upgrade kernel to 5.4+
 2. install docker.io & docker-compose 20.10
 
 ## 2.2 提交代码到新分支
