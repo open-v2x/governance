@@ -30,7 +30,7 @@
 1. config sshd
 2. copy test.mp4 to `/openv2x/videos/` for rtsp stream simulator
 3. set env in `/etc/environment`, `export OPENV2X_EXTERNAL_IP=...`
-4. docker pull hippocampus-base & v2x-algo-base for cache
+4. docker pull hippocampus-base & cerebrum-base for cache
 
 ### 2.1.2 Ubuntu 22.04
 
