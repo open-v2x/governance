@@ -8,6 +8,8 @@
 - [edgeview](https://github.com/open-v2x/edgeview)
 - [roadmocker](https://github.com/open-v2x/roadmocker)
 - [centerview](https://github.com/open-v2x/centerview)
+- [hippocampus](https://github.com/open-v2x/hippocampus)
+- [lidar](https://github.com/open-v2x/lidar)
 
 ## 1. 创建分支
 
@@ -18,7 +20,7 @@
 - `Branch name` 为新分支名称
 - `Branch source` 为现有分支，以现有分支为基础拉取分支
 - 注意:
-  - 拉取分支需要有改项目的相应权限
+  - 拉取分支需要有该项目的相应权限
   - 新分支名，可以参考 openstack 的命名规则，如"stable/wallaby"
 
 ## 2. 提交切换分支变更代码
@@ -48,18 +50,65 @@
 参考提交:
 
 - https://github.com/open-v2x/cerebrum/commit/179bed8c7cf6af3095e35102d4aa1abc9fcd3d7e
-- https://github.com/open-v2x/docs/commit/98ab54c39631a3f387cbb2a61de55c4970982f90
+- https://github.com/open-v2x/docs/commit/651199f11f0a6a77f3c755d61f2db6d7e05fae94
 - https://github.com/open-v2x/dandelion/commit/d96bfd9e47e93df90d658d1ab65b62ca3c94c598
 - https://github.com/open-v2x/edgeview/commit/adb90fec3b62da1205701e2786c42ee1faad0072
 - https://github.com/open-v2x/centerview/commit/bb13814222057e5a6889d7da7dd88d6f556a519e
 - https://github.com/open-v2x/roadmocker/commit/f3341f2f263f2d5030049265504c14712391b1b1
+- https://github.com/open-v2x/lidar/commit/cd82fcd6dedb1486f9a50515c270e66f06990360
+- https://github.com/open-v2x/hippocampus/commit/a50c26d5186c5334f060139199a5dbf8a964deb5
 
 注意事项:
 
 - `.drone.yml` 里面的一些分支和 tag 名，要和新分支名保持一致
 - `.github/workflows/` 下 的一些 CI 文件，里面的分支和 tag 名，要和新分支名保持一致
+- `.github/workflows/` 下 的一些 CI 文件，里面的密钥 secrets ，保持和 albany 一致,不新增变量
 - `.md` 结尾的文件，可以搜索一下，有没有按照分支名和 tag 名定义的地方，也需要和新分支保持一致
-- `open-v2x/docs` 项目里面，还需要修改`install.sh`脚本和 depoly 文件夹下的 `yaml` 文件
+- `open-v2x/docs` 项目里面，还需要修改`install.sh`脚本和 depoly 文件夹下的 `yaml` 文件，以及
+  `.github/workflows/package.yml` 文件
+- 举例，新分支名为 beihai ,已有分支名为 master 和 albany，需要全局搜索 master/albany/latest，看下是否需要替换成新分支名 beihai
+
+## 2.3 更改镜像标签
+
+更改标签名称为 beihai-1.2.0.commit-id ，2 表示 beihai 版本，0 表示 beihai 版本的第一次发布，commit-id 是 github 各个仓库中 beihai
+的最后一次提交的 commit id ,取前 7 位。下一次 beihai 发布的版本号应该是 beihai-1.2.1.commit-id。
+
+```shell
+docker_tag() {
+ images=(
+  "dandelion"
+  "edgeview"
+  "centerview"
+  "cerebrum"
+  "hippocampus"
+  "lidar"
+  "roadmocker"
+  )
+  registry=registry.cn-shanghai.aliyuncs.com # docker.io
+  for i in ${images[@]}; do
+    git clone git@github.com:open-v2x/${i}.git
+    cd ${i} || true
+    git checkout beihai
+    get_commit_id=`git log -1 --pretty=format:%h`
+    tag="beihai-1.2.0.${get_commit_id}"
+    echo ${tag}
+    cd -
+    rm -rf ${i}
+    docker pull ${registry}/openv2x/${i}:beihai
+    docker tag ${registry}/openv2x/${i}:beihai ${registry}/openv2x/${i}:${tag}
+    docker push ${registry}/openv2x/${i}:${tag}
+    if [[ ${i} == hippocampus ]]
+    then
+      docker pull ${registry}/openv2x/rtsp_simulator:beihai
+      docker tag ${registry}/openv2x/rtsp_simulator:beihai ${registry}/openv2x/rtsp_simulator:${tag}
+      docker push ${registry}/openv2x/rtsp_simulator:${tag}
+    fi
+    docker rmi ${registry}/openv2x/${i}:beihai
+  done
+}
+
+docker_tag
+```
 
 ## 3. 部署测试
 
@@ -79,11 +128,12 @@
 
 ## 4.1 Release Note
 
-> 参考: https://github.com/open-v2x/docs/releases/tag/albany-1.0.126
+> 参考: https://github.com/open-v2x/docs/releases/tag/albany-1.0.126 或者
+> https://github.com/open-v2x/docs/releases/tag/beihai-1.2.0
 
 基本包含:
 
-- Release Version: 发布的版本，如:"alabny"
+- Release Version: 发布的版本，如:"albany","beihai"
 - Release Date: 发布的日期，格式参考:"July 29, 2022"
 - Feature List: 功能列表，可以对比上次发版时的提交记录，列出新增功能
 - Bug Fix: 缺陷修复，同样可以对比上次发版的提交记录，列出新修复的缺陷问题
@@ -91,14 +141,9 @@
 
 ## 4.2 tag 命名规则
 
-> 参考 albany-1.0.126
+> 参考 beihai-1.2.0
 
-基本包含:
-
-- 发布版本，如: "alabny"
-- API 接口版本: 接口无删减的情况下，数字不变，一般为"1"
-- 功能新增: 同一发布版本有功能新增时数字递增
-- bug 修复数量: 截止版本发布日期当天的 bug 修复数量
+2 表示 beihai 版本，0 表示 beihai 版本的第一次发布，下一次 beihai 发布的版本号应该是 beihai-1.2.1。
 
 ## 4.3 发布
 
@@ -111,3 +156,33 @@ release
 2. release title: 填写标题，简易扼要
 3. release note: 将 release note 全部写入，注意 markdown 格式
 4. publish: 发布版本，也可以保存到草稿，后续修改完再发版
+
+## 4.4 宣传 beihai
+
+### 4.4.1 官网发文章
+
+https://openv2x.org/news/2022-11-18-1/
+
+## 4.5 文档整理
+
+### 4.5.1 修改 openv2x References 链接
+
+将 albany 相关的链接修改为新分支 beihai 的相关链接
+
+地址: https://github.com/open-v2x/.github/blob/master/profile/README.md
+
+参考提交 https://github.com/open-v2x/.github/commit/46d488ffac725ca157cc15c5ee6f23ad895a3b94
+
+![modify_references](images/modify_references.png)
+
+### 4.5.2 更新快速安装手册
+
+如果部署方法有变更或者补充，需要更新对应版本的[部署手册](https://github.com/open-v2x/docs/blob/beihai/docs/v2x-quick-install.md)
+
+参考提交 https://github.com/open-v2x/docs/commit/deb6a6e24cd8b3571eb028c076654eebc4a135de
+
+### 4.5.3 更新用户手册
+
+如果功能有新增，需要更新对应版本的[用户手册](https://github.com/open-v2x/docs/blob/beihai/docs/v2x-user-manual.md)
+
+参考提交 https://github.com/open-v2x/docs/commit/657cd642601f7defee43dc4cb46535517d525db3
