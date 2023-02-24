@@ -1,20 +1,3 @@
-centerview:
-  ptl:
-    name: Weiwei Mo
-    github: moweiwei
-    email: moweiwei6@gmail.com
-  service: V2X Central Portal
-  mission: >
-    To implement v2x central side portal - web console.
-  url: https://github.com/open-v2x/centerview
-  deliverables:
-    centerview:
-      repos:
-        - open-v2x/centerview
-    # centerview-specs:
-    #   release-management: none
-    #   repos:
-    #     - open-v2x/centerview-specs
 cerebrum:
   ptl:
     name: Wu Wenxiang
@@ -64,7 +47,7 @@ dandelion:
     #   release-management: none
     #   repos:
     #     - open-v2x/dandelion-specs
-edgeview:
+omega:
   ptl:
     name: Youmin Li
     github: AriaAto
@@ -72,15 +55,15 @@ edgeview:
   service: V2X Edge Portal
   mission: >
     To implement v2x edge side portal - web console.
-  url: https://github.com/open-v2x/edgeview
+  url: https://github.com/open-v2x/omega
   deliverables:
-    edgeview:
+    omega:
       repos:
-        - open-v2x/edgeview
-    # edgeview-specs:
+        - open-v2x/omega
+    # omega-specs:
     #   release-management: none
     #   repos:
-    #     - open-v2x/edgeview-specs
+    #     - open-v2x/omega-specs
 roadmocker:
   ptl:
     name: Youmin Li
