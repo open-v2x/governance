@@ -5,9 +5,9 @@
 - [cerebrum](https://github.com/open-v2x/cerebrum)
 - [docs](https://github.com/open-v2x/docs)
 - [dandelion](https://github.com/open-v2x/dandelion)
-- [edgeview](https://github.com/open-v2x/edgeview)
+- ~~[edgeview](https://github.com/open-v2x/edgeview)~~
 - [roadmocker](https://github.com/open-v2x/roadmocker)
-- [centerview](https://github.com/open-v2x/centerview)
+- ~~[centerview](https://github.com/open-v2x/centerview)~~
 - [hippocampus](https://github.com/open-v2x/hippocampus)
 - [lidar](https://github.com/open-v2x/lidar)
 
@@ -33,6 +33,7 @@
 2. copy test.mp4 to `/openv2x/videos/` for rtsp stream simulator
 3. set env in `/etc/environment`, `export OPENV2X_EXTERNAL_IP=...`
 4. docker pull hippocampus-base & cerebrum-base for cache
+5. [option] crontab setting
 
 ### 2.1.2 Ubuntu 22.04
 
@@ -52,8 +53,8 @@
 - https://github.com/open-v2x/cerebrum/commit/179bed8c7cf6af3095e35102d4aa1abc9fcd3d7e
 - https://github.com/open-v2x/docs/commit/651199f11f0a6a77f3c755d61f2db6d7e05fae94
 - https://github.com/open-v2x/dandelion/commit/d96bfd9e47e93df90d658d1ab65b62ca3c94c598
-- https://github.com/open-v2x/edgeview/commit/adb90fec3b62da1205701e2786c42ee1faad0072
-- https://github.com/open-v2x/centerview/commit/bb13814222057e5a6889d7da7dd88d6f556a519e
+- ~~https://github.com/open-v2x/edgeview/commit/adb90fec3b62da1205701e2786c42ee1faad0072~~
+- ~~https://github.com/open-v2x/centerview/commit/bb13814222057e5a6889d7da7dd88d6f556a519e~~
 - https://github.com/open-v2x/roadmocker/commit/f3341f2f263f2d5030049265504c14712391b1b1
 - https://github.com/open-v2x/lidar/commit/cd82fcd6dedb1486f9a50515c270e66f06990360
 - https://github.com/open-v2x/hippocampus/commit/a50c26d5186c5334f060139199a5dbf8a964deb5
@@ -157,7 +158,7 @@ release
 3. release note: 将 release note 全部写入，注意 markdown 格式
 4. publish: 发布版本，也可以保存到草稿，后续修改完再发版
 
-## 4.4 宣传 beihai
+## 4.4 宣传新版本（以 beihai 为例）
 
 ### 4.4.1 官网发文章
 
