@@ -68,6 +68,11 @@
 - `open-v2x/docs` 项目里面，还需要修改`install.sh`脚本和 depoly 文件夹下的 `yaml` 文件，以及
   `.github/workflows/package.yml` 文件
 - 举例，新分支名为 beihai ,已有分支名为 master 和 albany，需要全局搜索 master/albany/latest，看下是否需要替换成新分支名 beihai
+- 修改 cerebrum 仓库的 tag 时，需要强行合并 commit。因为跑 workflow 里的测试用例，是以 aio 的方式部署 cerebrum，但是 aio
+  部署用到新版本的镜像还没有推上去，测试用例会失败。可以参考 <https://github.com/open-v2x/cerebrum/pull/167>
+- 修改 docs 仓库下的 src/install.sh 时，cerebrum 和 hippocampus 的 base 是用来加速的，镜像标签不需要改成新版本，保持 latest 即可。参考:
+  - <https://github.com/open-v2x/docs/commit/e47f3cede6cae9d366190105ef16a3f2720dd97e>
+  - <https://github.com/open-v2x/docs/commit/e66b3c00acfef4b3a69d0c0c078d6f5bdc5f36b2>
 
 ## 2.3 更改镜像标签
 
