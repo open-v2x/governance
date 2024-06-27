@@ -41,6 +41,7 @@
 
 ```bash
 apt-get install docker.io docker-compose
+systemctl enable docker --now
 ```
 
 sh 指向 bash
@@ -58,10 +59,20 @@ root@openv2x-cicd:~/src# ls -al /usr/bin/sh
 lrwxrwxrwx 1 root root 4 Jun 27 16:26 /usr/bin/sh -> bash
 ```
 
-### 2.1.3 CentOS 7.9 2009
+### 2.1.3 Rocky 8
 
-1. upgrade kernel to 5.4+
-2. install docker.io & docker-compose 20.10
+install docker.io & docker-compose
+
+```bash
+# 翻墙，拿到数据，保存到 /etc/yum.repos.d/docker-ce.repo
+curl -ik https://download.docker.com/linux/centos/docker-ce.repo
+
+# 参考：https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/
+sed -i 's+https://download.docker.com+https://mirrors.tuna.tsinghua.edu.cn/docker-ce+' /etc/yum.repos.d/docker-ce.repo
+yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+systemctl enable docker --now
+```
 
 ## 2.2 提交代码到新分支
 
