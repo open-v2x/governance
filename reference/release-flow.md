@@ -37,7 +37,26 @@
 
 ### 2.1.2 Ubuntu 22.04
 
-1. `apt-get install docker.io docker-compose`
+安装 docker-compose
+
+```bash
+apt-get install docker.io docker-compose
+```
+
+sh 指向 bash
+
+```console
+root@openv2x-cicd:~/src# dpkg-reconfigure dash
+Removing 'diversion of /bin/sh to /bin/sh.distrib by dash'
+Adding 'diversion of /bin/sh to /bin/sh.distrib by bash'
+Removing 'diversion of /usr/share/man/man1/sh.1.gz to /usr/share/man/man1/sh.distrib.1.gz by dash'
+Adding 'diversion of /usr/share/man/man1/sh.1.gz to /usr/share/man/man1/sh.distrib.1.gz by bash'
+
+# 选否
+
+root@openv2x-cicd:~/src# ls -al /usr/bin/sh
+lrwxrwxrwx 1 root root 4 Jun 27 16:26 /usr/bin/sh -> bash
+```
 
 ### 2.1.3 CentOS 7.9 2009
 
